@@ -139,6 +139,11 @@ define Build/sign-dlink-ru
 	mv $@.new $@
 endef
 
+define Build/sign-dlink-ru-v
+	sign_dlink_ru $@ -v $1 $2
+	mv $@.new $@
+endef
+
 define Build/trx
 	$(STAGING_DIR_HOST)/bin/trx $(1) \
 		-o $@ \
